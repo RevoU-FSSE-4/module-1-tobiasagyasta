@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roeang Tamoe</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
@@ -12,76 +13,107 @@
 </head>
 <body>
     
-    <header>
+    <header id = "main-header">
         <a class = "title" href="index.html">Roeang Tamoe</a>
         <nav>
             <ul class ="nav-list">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#about-title">About</a></li>
+                <li><a href="#product-page">Products</a></li>
+                <li><a href="#form-page">Contact Us</a></li>
+            </ul>
+            <div class="hamburger-btn" onclick="changeHamburgerState()">
+                <img src="assets/images/web/hamburger_button_menu_icon.svg" class="hamburger-icon" alt="hamburger icon">
+            </div>
+            
+        </nav>
+        <nav id="hamburger-menu">
+            <ul id ="hamburger-list">
+                <li><a href="#about-title">About</a></li>
+                <li><a href="#product-page">Products</a></li>
+                <li><a href="#form-page">Contact Us</a></li>
             </ul>
         </nav>
     </header>
+
     <main class = "main-page">
         
         <section id ="header-image" alt = "header-image"></section>
         
-        <br><br><h1>About Us</h1>
         
         <section class="container-main">
-            <div class ="paragraph-main">   
-                <br>
-                <p>Roeang Tamoe adalah sebuah akomodasi untuk segala bentuk perbincangan dan diskusi anda bisa senyaman mungkin.
-                    Kami menyediakan berbagai macam kopi dan jajanan untuk anda.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, sem et eleifend rutrum, eros mi lobortis ipsum, molestie faucibus purus augue et turpis. 
-                    Morbi tellus lorem, malesuada eget blandit et, ultrices et quam. Vestibulum odio neque, porta nec urna a, pharetra malesuada orci. 
-                    Nam tristique porttitor diam nec sollicitudin. Phasellus sed tellus nunc. 
-                    Sed venenatis odio nulla, tempor facilisis ipsum dapibus vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Donec vitae ante consectetur mauris elementum volutpat. Duis vulputate urna nec neque commodo, et facilisis nibh luctus. 
+            <div class="paragraph-main column">
+                <h1 id="about-title">About Us</h1>
+                <div class ="paragraph-main row">   
+                    <p>Roeang Tamoe adalah sebuah akomodasi untuk segala bentuk perbincangan dan diskusi anda bisa senyaman mungkin.
+                        Kami menyediakan berbagai macam kopi dan jajanan untuk anda.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, sem et eleifend rutrum, eros mi lobortis ipsum, molestie faucibus purus augue et turpis. 
+                        Morbi tellus lorem, malesuada eget blandit et, ultrices et quam. Vestibulum odio neque, porta nec urna a, pharetra malesuada orci. 
+                        Nam tristique porttitor diam nec sollicitudin. Phasellus sed tellus nunc. 
+                        Sed venenatis odio nulla, tempor facilisis ipsum dapibus vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Donec vitae ante consectetur mauris elementum volutpat. Duis vulputate urna nec neque commodo, et facilisis nibh luctus. 
+                        In porta tempus nisi id posuere. Ut auctor mauris eget aliquet elementum. Etiam faucibus pretium enim quis lacinia.
+                    </p>   
+                </div>
+            </div>
+        </section>
+        
+        <div class="phone-image-separator"><img src="assets/images/web/cafeshop.jpg" alt="cafe image for phones"></div>
+
+        <section class="container-location">
+            <div class="info-grid">
+                <h1>Our Location</h1>
+                <p>
+                    Cafe kami - yang berada di lokasi Pesanggrahan, Jakarta Selatan - memberikan aura santai dan tenang, menjadi sebuah oasis di dalam hiruk-pikuknya Jakarta.
+                    "Open patio space" yang kami miliki bisa menjadi tempat yang perfect untuk segala event, diskusi, maupun perbincangan kasual anda dalam setiap waktu.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras finibus, sem et eleifend rutrum, eros mi lobortis ipsum, molestie faucibus purus augue et turpis. 
+                    <br><br>
+                    Morbi tellus lorem, malesuada eget blandit et, ultrices et quam. Vestibulum odio neque, porta nec urna a, pharetra malesuada orci. Nam tristique porttitor diam nec sollicitudin. Phasellus sed tellus nunc. Sed venenatis odio nulla, tempor facilisis ipsum dapibus vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ante consectetur mauris elementum volutpat. Duis vulputate urna nec neque commodo, et facilisis nibh luctus. 
                     In porta tempus nisi id posuere. Ut auctor mauris eget aliquet elementum. Etiam faucibus pretium enim quis lacinia.
                 </p>   
             </div>
-            <div><img id = "cafe-image" alt = "cafe image" src="assets/images/web/cafeshop.jpg"></div>   
+            <div class="cafe-picture"><img src="assets/images/web/cafeshop.jpg" alt="cafe image"></div>
+            <div class="event-picture-first"><img src="assets/images/web/conversation-picture.jpg" alt="conversation image"></div>
+            <div class="event-picture-second"><img src="assets/images/web/discussion-picture.jpg"alt="discussion image"></div>
         </section>
             
-        <h1>Our Products</h1>
-        
-        <section class="container-product">
-            <div class="product-item">
-                <div class="product-image-desc">
-                    <figure >
-                        <img src="assets/images/web/kopi_susu.jpg"> 
-                        <figcaption>Kopi Susu</figcaption> 
-                    </figure>
+    
+        <h1 id="product-page">Our Products</h1>
+        <section class="container-product">             
+                <div class="product-item">
+                    <div class="product-image-desc">
+                        <figure >
+                            <img src="assets/images/web/kopi_susu.jpg"> 
+                            <figcaption>Kopi Susu</figcaption> 
+                        </figure>
+                    </div>
                 </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image-desc">
-                    <figure >
-                        <img src="assets/images/web/kopi_seduh.jpg"> 
-                        <figcaption>Kopi Seduh</figcaption> 
-                    </figure>
+                <div class="product-item">
+                    <div class="product-image-desc">
+                        <figure >
+                            <img src="assets/images/web/kopi_seduh.jpg"> 
+                            <figcaption>Kopi Seduh</figcaption> 
+                        </figure>
+                    </div>
                 </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image-desc">
-                    <figure >
-                        <img src="assets/images/web/kopi_espresso.jpeg"> 
-                        <figcaption>Kopi Espresso</figcaption> 
-                    </figure>
+                <div class="product-item">
+                    <div class="product-image-desc">
+                        <figure >
+                            <img src="assets/images/web/kopi_espresso.jpeg"> 
+                            <figcaption>Kopi Espresso</figcaption> 
+                        </figure>
+                    </div>
                 </div>
-            </div>
-            <div class="product-item">
-                <div class="product-image-desc">
-                    <figure >
-                        <img src="assets/images/web/jajan_pasar.jpg"> 
-                        <figcaption>Jajanan Pasar</figcaption> 
-                    </figure>
+                <div class="product-item">
+                    <div class="product-image-desc">
+                        <figure >
+                            <img src="assets/images/web/jajan_pasar.jpg"> 
+                            <figcaption>Jajanan Pasar</figcaption> 
+                        </figure>
+                    </div>
                 </div>
-            </div>
         </section>
 
-        <section class="container-form">
+        <section class="container-form" id="form-page">
             <h1>Contact Us!</h1><br>
             <form class="contact-form">
                 <label for = "name-box">Name:</label><br>
@@ -94,7 +126,7 @@
                 <input id="phone-box" type="tel"  pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}"><br>
 
                 <label for = "message-box">Send us a message!</label><br>
-                <textarea id = "message-box"rows="5" cols="40"></textarea><br><br>
+                <textarea id = "message-box" rows="5" cols="40"></textarea><br><br>
 
                 <label>Tell us what you're interested in!</label><br><br>
                 <input type="radio" id = "visit-option" name="contact-radio" value = "visit">
