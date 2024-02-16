@@ -93,6 +93,7 @@ main
     grid-row-end: span end;
     align-self: top;
     justify-self: start;
+    padding: 0px 35px;
 }
 .cafe-picture
 {
